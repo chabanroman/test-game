@@ -1,0 +1,27 @@
+{
+  "extends": ["prettier"],
+  "rules": {
+    "quotes": [2, "single", "avoid-escape"],
+    "import-quotes/import-quotes": [1, "single"],
+    "react/no-unknown-property": "off",
+    "semi": ["error", "never"],
+    "import/no-default-export": 0,
+    "no-console": 0,
+    "no-restricted-syntax": [
+      "error",
+      {
+        "selector": "TSEnumDeclaration:not([const=true])",
+        "message": "Don't declare non-const enums"
+      }
+    ]
+  },
+  "plugins": ["import-quotes", "prettier"],
+  "overrides": [
+    {
+      "files": ["./tailwind.config.js"],
+      "rules": {
+        "import/no-default-export": 0
+      }
+    }
+  ]
+}
